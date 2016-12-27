@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-3.3.6/bootstrap-3.3.6/dist/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="bootstrap-3.3.6/bootstrap-3.3.6/dist/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="style.js" type="text/javascript"></script>
+
+
+</head>
+<body ng-app="myapp" ng-controller="mycntrl">
+<div class="dropdown">
+    <p class="dropdown-toggle"  data-toggle="dropdown">
+        Home
+    </p>
+    <ul class="dropdown-menu list-group">
+        <li class="dropdown-header">Campus</li>
+        <li class="list-group-item">login</li>
+        <li class="list-group-item disabled">registration</li>
+        <li class="list-group-item">address</li>
+        <li class="list-group-item">contact</li>
+
+</ul>
+
+</div>
+<div class="btn-toolbar">
+<div class="btn-group">
+<a href="#" class="btn btn-primary">Button1</a>
+<a href="#" class="btn btn-info">Button2</a>
+<a href="#" class="btn btn-danger">Button3</a>
+<a href="#" class="btn btn-default">Button4Button5</a>
+</div>
+    <div class="btn-group-vertical">
+    <a href="#" class="btn btn-primary">Button1</a>
+    <a href="#" class="btn btn-info">Button2</a>
+    <a href="#" class="btn btn-danger">Button3</a>
+    <a href="#" class="btn btn-default">Button4Button5</a>
+    </div>
+
+        <div class="dropdown-toggle" data-toggle="dropdown">
+            <button class="btn btn-default">action1</button>
+            <ul class="dropdown-menu">
+                <li>action1</li>
+                <li>action2</li>
+                <li>action3</li>
+                <li>action4</li>
+            </ul>
+        </div>
+</div>
+
+<div class="btn-group">
+    <button class="btn btn-default">Sql server</button>
+    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#" class="btn btn-default">action1</a></li>
+        <li><a href="#" class="btn btn-default">action1</a></li>
+        <li><a href="#" class="btn btn-default">action1</a></li>
+    </ul>
+</div>
+
+
+<div class="container">
+
+<div class="col-sm-3 col-sm-offset-4">
+<table class="table table-bordered table-hover">
+    <thead>
+    <tbody>
+<tr> <td>Name</td>
+            <td>Salary</td>
+            <td>Email </td>
+            <td>phone </td>
+</tr>
+<tr ng-repeat="employee in employee">
+    <td>{{employee.name}}</td>
+    <td>{{employee.salary}}</td>
+    <td>{{employee.email}}</td>
+    <td>{{employee.phone}}</td>
+</tr>
+    </tbody>
+    </thead>
+
+</table>
+
+    <input class="btn  btn-primary" type="button" value="Submit"/><br>
+    <input class="btn btn-info" type="submit"/>
+    <button class="btn"><span class="glyphicon glyphicon-envelope"></span> input</button>
+
+</div>
+</div>
+{{2+3}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+<form class="form-horizontal">
+    <div class="form-group">
+    <label for="username" class="control-label  input-lg" >Username</label>
+        <div class="col-sm-4">
+        <input type="text"  class="form-control" id="username" placeholder="enter username"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="control-label col-sm-2">Password</label>
+        <div class="col-sm-4">
+            <input type="text"class="form-control" id="password" placeholder="enter username"/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;
+        <button class="col-sm-offset-2 btn btn-default">Login</button>
+    </div>
+</form>
+        </div>
+    </div>
+</div>
+<form>
+            <div class="form-group">
+        <textarea class="form-control" rows="10" placeholder="write here">
+        </textarea>
+            </div>
+
+        <label class=" checkbox-inline">
+            <input type="checkbox" value="option1"/>option1
+        </label>
+
+        <label class=" checkbox-inline">
+            <input type="checkbox" value="option2"/>option2
+        </label>
+
+        <label class=" checkbox-inline">
+            <input type="checkbox" value="option3"/>option3
+        </label>
+<div class="radio">
+    <label>
+        <input type="radio" name="namegroup" value="radio1"/>radio1
+    </label>
+</div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="namegroup" value="radio2"/>radio2
+        </label>
+    </div>
+    <div class="radio disabled">
+        <label>
+            <input type="radio" name="namegroup" value="radio3"/>radio3
+        </label>
+    </div>
+    <div>
+        <select class="form-control">
+            <optgroup  label="deepak" multiple="multiple">
+            <option value="option1">one</option>
+                <option value="option2">two</option>
+            </optgroup>
+            <optgroup label="merugu">
+                <option value="option3">three</option>
+                <option value="option4">four</option>
+            </optgroup>
+        </select>
+    </div>
+    <form name="form1" class="has-error">
+<input type="password" name="deepak" ng-model="name" step="1" minlength="6" maxlength="12">
+
+</form>
+</form>
+
+<form>
+    <div class="input-group">
+        <span class="input-group-addon">e</span><input type="text"/>
+
+    </div>
+</form>
+</body>
+</html>

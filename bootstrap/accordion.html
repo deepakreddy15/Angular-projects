@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <link rel="stylesheet" href="bootstrap-3.3.6/bootstrap-3.3.6/dist/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="bootstrap-3.3.6/bootstrap-3.3.6/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="firstboot.css">
+</head>
+<body>
+<div class="container">
+    <div id="parent" class="panel-group">
+    <div class="panel">
+        <div class="panel-heading">
+            <button class="btn btn-default" data-toggle="collapse" data-parent="#parent" data-target="#targeone"><span class="glyphicon glyphicon-arrow-up">
+            </span> Asian</button>
+        </div>
+        <div class="panel-body collapse" id="targeone">
+            <ul class="list-group">
+                <li class="list-group-item">India</li>
+                <li class="list-group-item">China</li>
+                <li class="list-group-item">Pakistan</li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading">
+            <button class="btn btn-default" data-toggle="collapse" data-parent="#parent" data-target="#targetwo"><span class="glyphicon glyphicon-arrow-up">
+            </span>Australia</button>
+        </div>
+        <div class="panel-body collapse" id="targetwo">
+            <ul class="list-group">
+                <li class="list-group-item">Sydne</li>
+                <li class="list-group-item">Melborne</li>
+                <li class="list-group-item">Dice</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<br><br><br><br>
+<div class="container">
+    <button  class="btn btn-default" id="buttonbtn">Login</button>
+    <div class="modal col-sm-offset-3 col-sm-3" id="modelevent" data-keyboard="false" id="modelid">
+        <div class="modal-content" id="login">
+            <div class="modal-header">
+                <h4>Login</h4>
+                <button id="closing">Q</button>
+            </div>
+            <div class="modal-body"></div>
+            <div class=" form-group">
+                <label for="userid"  >Username</label>
+                <input type="text" class="form-control" id="userid"/>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li>
+            <a href="#homeid" data-toggle="tab">Home</a>
+        </li>
+        <li>
+            <a href="#contactid" data-toggle="tab">Contact</a>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" id="mouse" class="dropdown-toggle">Location</a>
+            <ul class="dropdown-menu">
+            <li><a href="#locationone" data-toggle="tab">India</a></li>
+            <li><a href="#locationtwo" data-toggle="tab">China</a></li>
+        </ul>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="homeid" class="tab-pane">
+            <h3>This is home page</h3>
+            <h2>This is home page</h2>
+        </div>
+        <div id="contactid" class="tab-pane">
+            <h3>notho</h3>
+            <h2>Address:edison</h2>
+        </div>
+        <div id="locationone" class="tab-pane">
+            <h3>france page</h3>
+            <h2>Germany</h2>
+        </div>
+        <div id="locationtwo" class="tab-pane">
+            <h3>india page</h3>
+            <h2>australia</h2>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <span class="glyphicon glyphicon-arrow-up input-group-addon" id="manul">khk</span><button class="form-control btn-default btn" >tootltip</button>
+</div>
+</div>
+<div class="container">
+    <div class="form-group input-group">
+        <input type="text" class="form-control" title="this is your pic" data-toggle="popover"
+           data-content="<img src=Sample Pictures/Chrysanthemum.jpg/>"/>
+    </div>
+</div>
+
+<script type="text/javascr
+
+    $(document).ready(function () {
+       $(".collapse").on("shown.bs.collapse", function () {
+           $(this).parent().find('.glyphicon-arrow-up').remove('glyphicon-arrow-up').addClass('glyphicon-arrow-down');
+       })
+        $(".collapse.in").on("hidden.bs.collapse", function () {
+            $(this).parent().find('.glyphicon-arrow-down').remove('glyphicon-arrow-down').addClass('glyphicon-arrow-up');
+        })
+        $("#buttonbtn").on('click',function () {
+            $("#modelid").modal('show')
+        })
+
+        $("#closing").on("click",function () {
+            $("#modelid").modal('hide')
+        })
+       $("#modelevent").on("show.bs.modal",function () {
+            alert("model is about to open");
+        })
+        $("#modelevent").on("shown.bs.modal",function () {
+            alert("model has opened");
+        })
+        $("#modelevent").on("hide.bs.modal",function () {
+            alert("model is ready to close");
+        })
+        $("#modelevent").on("hidden.bs.modal",function () {
+            alert("model has been hidden");
+        })
+        $("#titleid").tooltip({
+            trigger:"click",
+            placement: "right",
+            title: "<img src='Sample pictures/Desert.jpg' style='width:100px;height: 100px '>",
+            animation:true,
+            delay: ({show:300,hide:100}),
+            html:true
+        })
+        $("#manul").click(function () {
+            $("#titleid").tooltip('trigger');
+        })
+        ;
+    });
+
+   </script>
+</html>

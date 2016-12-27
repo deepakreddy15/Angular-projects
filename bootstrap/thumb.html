@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="bootstrap-3.3.6/bootstrap-3.3.6/dist/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="bootstrap-3.3.6/bootstrap-3.3.6/dist/js/bootstrap.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel">
+            <a class="panel-heading"  id="toggleclass">Bootstrap Images</a>
+                <a class="panel-heading " id="showclass">show Images</a>
+                <a class="panel-heading " id="hideclass">hide Images</a>
+
+            <div class="panel-body " id="thisone">
+            <a href="Sample Pictures/Chrysanthemum.jpg" class="col-sm-4 thumbnail">
+                <p class="line">first one</p>
+                <img src="Sample Pictures/Chrysanthemum.jpg" class="img-responsive"/></a>
+            <a href="Sample Pictures/Desert.jpg" class="col-sm-4 thumbnail">
+                <p class="line">first one</p>
+                <img src="Sample Pictures/Desert.jpg" class="img-responsive"/></a>
+            <a href="Sample Pictures/Hydrangeas.jpg" class="col-sm-4 thumbnail">
+                <p class="line">first one</p>
+                <img src="Sample Pictures/Hydrangeas.jpg" class="img-responsive "/></a>
+        </div>
+            </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 dropdown">
+            <div class="dropdown-toggle" onclick="myfunction()" data-toggle="dropdown">
+                <button class="btn btn-default">clickme!!</button>
+            </div>
+            <div class="dropdown-menu">
+                <ul class="list-group">
+                    <li><a href="#" class="btn btn-default">Home</a></li>
+                    <li><a href="#" class="btn btn-default">Lead</a></li>
+                    <li><a href="#" class="btn btn-default">Account</a></li>
+                    <li><a href="#" class="btn btn-default">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#toggleclass").on('click',function () {
+            $('#thisone').collapse('toggle');
+        });
+        $("#showclass").on('click',function () {
+            $('#thisone').collapse('show');
+        })
+        $("#hideclass").on('click',function () {
+            $('#thisone').collapse('hide');
+        })
+        $('#thisone').on('show.bs.collapse', function () {
+            alert("you just clicked");
+        });
+        $('#thisone').on('shown.bs.collapse', function () {
+            alert("successfully opened");
+        });
+        $('#thisone').on('hide.bs.collapse', function () {
+            alert("you are hiding me");
+        });
+        $('#thisone').on('hidden.bs.collapse', function () {
+            alert("i am done brother");
+        });
+    });
+</script>
+
+</body>
+</html>

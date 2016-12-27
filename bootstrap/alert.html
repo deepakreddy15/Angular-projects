@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-3.3.6/bootstrap-3.3.6/dist/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="bootstrap-3.3.6/bootstrap-3.3.6/dist/js/bootstrap.js"></script>
+    <link href="firstboot.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <button class="btn btn-default" id="alertid">Submit</button>
+    <div class="alert alert-danger collapse" id="dangerid">
+        <a href="#" class="close" id="dismisid">&larr;</a>
+        <p>Enter Correct name</p>
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-12">
+    <div class="imgcarsole" class="carousel slide" data-interval="1000" data-pause="false" data-ride="carousel">
+        <ul class="carousel-indicators">
+
+            <li data-target="#imgcarsole" data-slide-to="0" class="active"></li>
+            <li data-target="#imgcarsole" data-slide-to="1"></li>
+
+
+
+        </ul>
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="Sample Pictures/Desert.jpg"/>
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <img src="Sample Pictures/Jellyfish.jpg"/>
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <img src="Sample Pictures/Hydrangeas.jpg"/>
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                    </div>
+
+                </div></div>
+            <div class="item">
+                <div class="row">
+                <div class="col-sm-4">
+                    <img src="Sample Pictures/Jellyfish.jpg"/>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+
+                    <img src="Sample Pictures/Hydrangeas.jpg"/>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <img src="Sample Pictures/Penguins.jpg"/>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+    </div>
+        <a class="carousel-control left" href="#imgcarsole" data-slide="prev">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+        </a>
+        <a class="carousel-control right" href="#imgcarsole" data-slide="next">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+        </a>
+    </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#alertid").click(function() {
+            $("#dangerid").collapse('show');
+            setTimeout(function () {
+                $("#dangerid").collapse('hide');
+            },2000)
+        });
+        $("#dismisid").click(function () {
+            $("#dangerid").collapse('hide');
+        })
+
+    })
+</script>
+</html>
