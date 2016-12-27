@@ -1,0 +1,16 @@
+.form{
+
+
+
+background-color:grey;
+}
+input{
+    margin:1em ;
+}
+.emailplace::-webkit-input-placeholder {
+          text-align: right;
+
+}
+help-block{
+    color: red;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/new.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
+</head>
+<body ng-controller="mycntrl">
+<h1>Contact list</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody><tr>
+            <td><input class="form-control" ng-model="name" name="name"></td>
+            <td><input class="form-control" ng-model="email" name="email"></td>
+            <td><input class="form-control" ng-model="phone" name="phone"></td>
+            <td><button class="btn btn-default" ng-click="addcontact()">AddContact</button></td>
+        </tr>
+        <tr ng-repeat="contactlist in contactlist">
+            <td>{{contactlist.name}}</td>
+            <td>{{contactlist.email}}</td>
+            <td>{{contactlist.phone}}</td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+<script  src="/new.js"></script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+<script src="login.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripting/route.min.js"></script>
+    <link rel="stylesheet" href="login.css">
+
+
+</head>
+<body ng-app="mylogin" ng-controller="logincntrl">
+
+<form ng-action="#success">
+    username:<input type="text" ng-model="username"/><br/>
+    password:<input type="{{inputtype}}" ng-model="password" placeholder="type password" />
+    <input type="checkbox" id="check1" ng-model="check" ng-click="showhidepassword()"/>
+    <label for="check1" ng-if="check">show password</label>
+    <label for="check1" ng-if="!check">hide password</label><br/>
+    <button type="submit" ng-click="submit()" >submit</button>
+</form>
+<div ng-view=""></div>
+
+<p> {{message}}</p>
+<p>this is username: {{username}}</p>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "records":[{
+    "name": "deepak",
+    "age": 24,
+    "status": "F1"
+  },
+    {
+      "name": "manoj",
+      "age": 28,
+      "status": "H1B"
+    },
+    {
+      "name": "revanth",
+      "age": 24,
+      "status": "F1"
+    },
+    {
+      "name": "bharth",
+      "age": 24,
+      "status": "F1"
+    }]
+}

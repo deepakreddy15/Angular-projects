@@ -1,0 +1,12 @@
+table{
+    border: 1pt solid red;
+    border-collapse: collapse;
+    width: 500px;
+    margin: 20%;
+
+
+}
+tr,td,th{
+    border: 1pt solid black;
+    text-align: left;
+}

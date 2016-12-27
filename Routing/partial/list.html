@@ -1,0 +1,18 @@
+<table style="size: 400px">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>age</th>
+        <th>location</th>
+        <th><a href="/add"> Add </a></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="employee in employee">
+        <td>{{employee.name}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.location}}</td>
+        <td><button href="edit">edit</button></td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,27 @@
+
+<form action="#login" ng-submit="submit(list)">
+    username:<input type="text" ng-model="list.username"/><br/>
+    password:<input type="password" ng-model="list.password" ng-hide="show" />
+    <input type="checkbox"  ng-hide="show"><br/>
+    <input type="submit"  value="submit"/>
+</form>
+
+
+<table style="size: 400px">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>age</th>
+        <th>location</th>
+        <th><a href="#add">Add</a></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="person in employee">
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>
+        <td>{{person.location}}</td>
+        <td><a ng-href="#edit/{{$index}}">edit</a></td>
+    </tr>
+    </tbody>
+</table>
